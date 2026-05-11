@@ -48,3 +48,7 @@ li {
 .edit {
     background: #eab308;
 }
+
+.edit:hover {
+    background: #ca8a04;
+}
