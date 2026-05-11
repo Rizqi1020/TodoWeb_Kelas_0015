@@ -52,3 +52,7 @@ li {
 .edit:hover {
     background: #ca8a04;
 }
+
+.status {
+    background: #22c55e;
+}
