@@ -10,7 +10,7 @@ btnTambah.addEventListener("click", function() {
     let tanggal = inputTanggal.value; 
 
     if(teksTugas === "" || tanggal === "") {
-        alert("Tugas sama tanggal wajib diisi cuy!");
+        alert("Tugas dan tanggal wajib diisi!");
         return;
     }
 
@@ -70,7 +70,7 @@ function editTugas(index) {
 }
 
 function hapusTugas(index) {
-    if(confirm("Apakah lu yakin mau ngehapus tugas ini bro?")) {
+    if(confirm("Apakah anda yakin mau ngehapus tugas ini?")) {
         todos.splice(index, 1);
         renderTugas();
     }
