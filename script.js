@@ -22,6 +22,9 @@ btnTambah.addEventListener("click", function() {
  renderTugas();
 });
 
+ function renderTugas() {
+    daftarTugas.innerHTML = "";
+
  let listbaru = document.createElement("li");
  let spanbaru = document.createElement("span");
 
@@ -39,5 +42,3 @@ btnTambah.addEventListener("click", function() {
         item.style.color = "green";
     }
  });
- inputTugas.value = "";
-});
