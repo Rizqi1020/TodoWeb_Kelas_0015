@@ -66,6 +66,13 @@ btnTambah.addEventListener("click", function() {
     renderTugas();
 }
 
+ function hapusTugas(index) {
+    if(confirm("Apakah Anda yakin ingin menghapus tugas ini?")) {
+        todos.splice(index, 1);
+        renderTugas();
+    }
+}
+
  let listbaru = document.createElement("li");
  let spanbaru = document.createElement("span");
 
