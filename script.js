@@ -25,6 +25,35 @@ btnTambah.addEventListener("click", function() {
  function renderTugas() {
     daftarTugas.innerHTML = "";
 
+    todos.forEach((todo, index) => {
+        let coret = todo.status === 'Done' ? 'line-through' : 'none';
+        let warnaStatus = todo.status === 'Done' ? 'green' : 'red';
+
+        daftarTugas.innerHTML += `
+        <li style="text-decoration: ${coret}; color: ${warnaStatus};">
+            <spanstyle="text-decoration: ${coret}; display: block; margin-bottom: 5px;">
+             <strong>${todo.task}</strong> | Deadline: ${todo.date} | Status: <strong style="color:${todo.status}</strong>
+            </span>
+            <div>
+                <button onclick="ubahStatus(${index})">Ubah Status</button>
+                <button onclick="editTugas(${index})">Edit</button>
+                <button onclick="hapusTugas(${index})">Hapus</button>
+            </div>
+        </li>
+        `;
+    });
+}
+
+ function ubahStatus(index) {
+    if(todos[index].status === 'Progress') {
+        todos[index].status = 'Done';
+    } else {
+        todos[index].status = 'Progress';
+    }
+
+ renderTugas();
+}
+
  let listbaru = document.createElement("li");
  let spanbaru = document.createElement("span");
 
