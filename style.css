@@ -56,3 +56,8 @@ li {
 .status {
     background: #22c55e;
 }
+
+.status:hover {
+    background: #0284c7;
+}
+
