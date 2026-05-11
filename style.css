@@ -41,6 +41,6 @@ li {
     background: #ef4444;
 }
 
-.hapus :hover {
-    background: #dc2626;
+.hapus:hover {
+    background: #b91c1c;
 }
