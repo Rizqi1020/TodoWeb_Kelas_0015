@@ -54,6 +54,18 @@ btnTambah.addEventListener("click", function() {
  renderTugas();
 }
 
+ function editTugas(index) {
+    let newTask = prompt("Edit tugas:", todos[index].task);
+    let newDate = prompt("Edit tanggal:", todos[index].date);
+    if(newTask !== null && newTask.trim() !== "") {
+        todos[index].task = newTask.trim();
+    }
+    if(newDate !== null && newDate.trim() !== "") {
+        todos[index].date = newDate.trim();
+    }
+    renderTugas();
+}
+
  let listbaru = document.createElement("li");
  let spanbaru = document.createElement("span");
 
