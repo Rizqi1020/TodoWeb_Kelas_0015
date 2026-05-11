@@ -64,3 +64,9 @@ li {
 button {
     transition: background 0.3s ease;
 }
+
+body{
+    max-width: 600px;
+    margin: 40px auto;
+    font-family: sans-serif;
+}
