@@ -16,6 +16,9 @@ btnTambah.addEventListener("click", function() {
 
  todos.push({task: teksTugas, date: tanggal, status: 'Progress'});
 
+ inputTugas.value = "";
+ inputTanggal.value = "";
+
  let listbaru = document.createElement("li");
  let spanbaru = document.createElement("span");
 
